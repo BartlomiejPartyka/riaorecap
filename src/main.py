@@ -1,5 +1,5 @@
 import src.gui
 import streamlit as st
+import resources
 
-st.write("Hello world")
-st.write("Hellooooo")
+st.image('src/resources/image.jpg')
