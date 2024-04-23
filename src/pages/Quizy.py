@@ -1,7 +1,7 @@
 import streamlit as st
 
 st.title("Quizy")
-st.subheader(" ")
+st.subheader("  ")
 
 pages_names = ['Część 1', 'Część 2']
 page = st.radio('Wybierz zakres materiału', pages_names, index=None)
