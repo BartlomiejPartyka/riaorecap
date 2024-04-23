@@ -1,12 +1,26 @@
 import streamlit as st
 
-st.title("Quizy")
-st.subheader("  ")
 
-pages_names = ['Część 1', 'Część 2']
-page = st.radio('Wybierz zakres materiału', pages_names, index=None)
+class Quizy:
+    def __init__(self):
+        self.page = None
+    def print(self):
+        st.title("Quizy")
+        st.subheader("  ")
 
-if page == 'Część 1':
-    st.write("Pierwszaa")
-elif page == 'Część 2':
-    st.write("drugaaa")
+        pages_names = ['Część 1', 'Część 2']
+        self.page = st.radio('Wybierz zakres materiału', pages_names, index=None)
+
+        if self.page == 'Część 1':
+            st.write("Pierwszaa")
+        elif self.page == 'Część 2':
+            st.write("drugaaa")
+
+    def get_questions(self):
+        pass
+
+
+
+
+quizy = Quizy()
+quizy.print()
