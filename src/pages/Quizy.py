@@ -22,7 +22,8 @@ class Quizy:
         result = ((1, "radio", "Czy kotek ma cztery łapki?", 2, 1, "Prawda", "Fałsz"),
                   (2, "select", "Które zwierzę jest ssakiem?", 4, 2, "Wróbelek", "Kotek", "Żabcia", "Ślimaczek"),
                   (3, "check", "Które elementy posiada kotek?", 5, 124, "Uszka", "Pazurki", "Kopyta", "Ogonek",
-                   "Skrzydła"))
+                   "Skrzydła"),
+                  (4, "radio", "Czy kotki lubią drapać?", 2, 1, "Bardzo", "Niezbyt"))
 
         for r in result:
             st.write(str(r[0]) + ". Pytanie:")
