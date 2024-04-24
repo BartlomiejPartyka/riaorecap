@@ -38,7 +38,7 @@ class Quizy:
             result = None
 
         length = len(result)
-        self.answers = list(x for x in range(int(len(result))))
+        self.answers = list(0 for x in range(int(len(result))))
 
         for index, r in enumerate(result):
             st.write(str(r[0]) + ". Pytanie:")
@@ -61,8 +61,6 @@ class Quizy:
         for i in range(int(q_tuple[3])):
             if r_question == options[i]:
                 self.answers[int(q_tuple[0])-1] = 1+i
-            else:
-                self.answers[int(q_tuple[0]-1) - 1] = 0
 
         st.write(self.answers)
 
@@ -77,8 +75,6 @@ class Quizy:
         for i in range(int(q_tuple[3])):
             if s_question == options[i]:
                 self.answers[int(q_tuple[0])-1] = 1+i
-            else:
-                self.answers[int(q_tuple[0]-1) - 1] = 0
 
         st.write(self.answers)
 
@@ -96,8 +92,13 @@ class Quizy:
             else:
                 c_answers[x] = "N"
 
-        c.write(c_answers)
-        st.write(self.compress_check(c_answers))
+        compressed_answers = self.compress_check(c_answers)
+        if compressed_answers > 0:
+            self.answers[int(q_tuple[0]) - 1] = int(compressed_answers)
+        else:
+            self.answers[int(q_tuple[0]) - 1] = 0
+        st.write(self.answers)
+
 
     def compress_check(self, ans):
         number = 0
