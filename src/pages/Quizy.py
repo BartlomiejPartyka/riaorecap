@@ -1,5 +1,5 @@
 import streamlit as st
-from src import db
+#from src import db
 
 
 class Quizy:
