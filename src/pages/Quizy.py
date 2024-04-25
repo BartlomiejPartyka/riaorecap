@@ -49,6 +49,11 @@ class Quizy:
                 self.select_add(r, cont, length)
             elif r[1] == "check":
                 self.check_add(r, cont, length)
+        accept = st.button("Zatwierdź")
+        if accept == True:
+            self.show_results()
+
+
 
     def radio_add(self, q_tuple, c, l):
         options = list(x for x in range(int(q_tuple[3])))
@@ -107,6 +112,9 @@ class Quizy:
                 number = number*10
                 number += index+1
         return number
+
+    def show_results(self):
+        pass
 
 
 

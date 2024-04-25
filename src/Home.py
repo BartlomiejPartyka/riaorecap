@@ -1,4 +1,3 @@
-import src.gui
 import streamlit as st
 import resources
 import base64
